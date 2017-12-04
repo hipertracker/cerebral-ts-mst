@@ -1,15 +1,15 @@
-import { types } from 'mobx-state-tree'
 import { set } from 'cerebral/operators'
-import { state, props } from 'cerebral/tags'
+import { props, state } from 'cerebral/tags'
+import { types } from 'mobx-state-tree'
 
 export default {
   model: {
-    message: types.string
+    message: types.string,
   },
   state: {
-    message: 'Hi '
+    message: 'Hi ',
   },
   signals: {
-    messageChanged: set(state`app.message`, props`value`)
-  }
+    messageChanged: set(state`app.message`, props`value`),
+  },
 }
