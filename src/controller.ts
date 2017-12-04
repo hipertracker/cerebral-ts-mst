@@ -9,7 +9,7 @@ const Devtools = (
 export default Controller({
   devtools: Devtools && Devtools({
     host: 'localhost:8585',
-    reconnect: true
+    reconnect: false
   }),
   modules: { app }
 })
